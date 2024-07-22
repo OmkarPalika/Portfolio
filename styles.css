@@ -12,6 +12,24 @@ body {
   padding: 0;
 }
 
+/* Hide scrollbars */
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 1em;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
 .text-large {
   font-size: 32px;
 }
@@ -137,19 +155,28 @@ button:hover {
 /* Header navigation positioning */
 header {
   position: relative;
-  height: 80vh;
+  height: 85vh;
   padding: 2% 2%;
-  background-size: 40% auto;
-  background-repeat: no-repeat;
-  background-position: 10% 20px;
-  background-image: linear-gradient(
-      to bottom,
-      transparent,
-      transparent 50%,
-      transparent 75%,
-      #000 99%
-    ),
-    url("images/Portfolio2.png");
+  overflow: hidden;
+}
+
+header>nav,
+#logo {
+  animation: fadeIn 6.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 #nav-about,
